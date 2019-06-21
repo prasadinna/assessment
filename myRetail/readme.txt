@@ -13,3 +13,27 @@ curl -v -X PUT -H "Content-Type: application/json" \
 todo
  future based calls
  error handling and code cleanup 
+
+-----------------------------------------
+comment moderation
+
+objection word
+		objectionKeys.add("infamous");
+		objectionKeys.add("thief");
+		objectionKeys.add("murder");
+		objectionKeys.add("kill");
+		objectionKeys.add("miser");
+		objectionKeys.add("imprison");
+
+
+curl -v -X POST -H "Content-Type: application/json" \
+        --data-binary '{"userId":"user1","creationDate":"103","documentReference":"doc123","commentContent":"no malcontent found a good supplier","commentStatus":"SUBMIT", "parentId":null,"childIds":[]}' \
+        http://localhost:8085/api/comment/v1/create 
+        
+        
+curl -v -X POST -H "Content-Type: application/json" \
+        --data-binary '{"userId":"user1","creationDate":"103","documentReference":"doc123","commentContent":"thief suppplier killing him is an option","commentStatus":"SUBMIT", "parentId":null,"childIds":[]}' \
+        http://localhost:8085/api/comment/v1/create 
+        
+curl -v -X GET -H "Content-Type: application/json" http://localhost:8085/api/comment/v1/obbjectionslist   
+

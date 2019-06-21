@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<solr persistent="true"> 
+        <cores adminPath="romcore" defaultCoreName="romcore"> 
+            <core name="romcore" instanceDir="romcore" /> 
+        </cores> 
+    </solr> 

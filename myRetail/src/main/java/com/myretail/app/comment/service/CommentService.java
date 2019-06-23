@@ -61,6 +61,7 @@ public class CommentService {
 			e.printStackTrace();
 		}
 		CommentPostResponse response = new CommentPostResponse();
+		response.setResponse("posted comment");
 		return response;
 	}
 
